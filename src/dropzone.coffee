@@ -1460,15 +1460,10 @@ if jQuery?
 
 
 
-
-if module?
-  module.exports = Dropzone
-else
+if window?
   window.Dropzone = Dropzone
-
-
-
-
+else if module?
+  module.exports = Dropzone
 
 # Dropzone file status codes
 Dropzone.ADDED = "added"
